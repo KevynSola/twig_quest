@@ -1,0 +1,20 @@
+{% extends "home.html.twig" %}
+
+{% block hello %}
+    <h1>Hello {{ name }} !</h1>
+{% endblock %}
+
+{% block products %}
+    <section>
+            <ul>
+            {% for product in products %}
+                <li>{{ product }}</li>
+            {% else %}
+                <li>Not a products</li>
+            {% endfor %}
+                <pre>
+                    {{ dump(products) }}
+                </pre>
+            </ul>
+        </section>
+{% endblock %}
